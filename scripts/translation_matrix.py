@@ -1,4 +1,4 @@
-# USAGE : python3 scripts/check_lang.py
+# USAGE : python3 scripts/translation_matrix.py
 
 from genericpath import isfile
 from io import TextIOWrapper
@@ -7,14 +7,11 @@ from os.path import join
 import json
 import re
 
-
 # Last commit of a translation : 1dde8430
 # git diff 1dde8430 1.20.x -- ./Xplat/src/main/resources/assets/botania/lang/en_us.json > scripts/en_us.diff
 
-
 cwd = getcwd()
-LANG_PATH = path.join("Xplat", "src", "main", "resources", "assets", "botania", "lang")
-LANG_PATH = path.join(cwd, LANG_PATH)
+LANG_PATH = path.join(cwd, "Xplat", "src", "main", "resources", "assets", "botania", "lang")
 
 FIRST_LINE = "### STATUS"
 SECOND_LINE = "| lang | count | extra | missing |"
@@ -34,27 +31,48 @@ COMMENT_PATTERN = "_comment"
 COMMENT_REGEX = re.compile(COMMENT_PATTERN)
 
 
+flag_dict = {
+    "en_us" : "🇺🇸",
+    "pt_br" : "🇧🇷",
+    "zh_cn" : "🇨🇳",
+    "ru_ru" : "🇷🇺",
+    "zh_tw" : "🇹🇼",
+    "fr_fr" : "🇫🇷",
+    "de_de" : "🇩🇪",
+    "uk_ua" : "🇺🇦",
+    "ja_jp" : "🇯🇵",
+    "ko_kr" : "🇰🇷",
+    "nl_nl" : "🇳🇱",
+    "es_es" : "🇪🇸",
+    "tr_tr" : "🇹🇷",
+    "en_gb" : "🇬🇧",
+    "es_ar" : "🇦🇷"
+}
+
+
 class LangMeta():
     def __init__(self, lang:str, count:int, extra_lines:int, missing_lines:int):
         self.lang = lang
         self.count = count
         self.extra = extra_lines
         self.missing = missing_lines
+        self.flag = flag_dict.get(lang, "")
+
     def __str__(self) -> str:
-        return f"| {self.lang} | {self.count} | {self.extra} | {self.missing} | "
+        return f"| {self.flag} {self.lang} | {self.count} | {self.extra} | {self.missing} | "
 
 
-def count_sort(element:LangMeta):
+def count_sort(element:LangMeta) -> int:
     return element.count
 
 
-def get_list_lang_id()->list[str]:
+def get_list_lang_id() -> list[str]:
     list_lang_id = [f.split(".")[0] for f in listdir(LANG_PATH) if isfile(join(LANG_PATH, f))]
     list_lang_id.remove(EN_US)
     return list_lang_id
 
 
-def get_json_dict(filepath)-> dict: 
+def get_json_dict(filepath: TextIOWrapper) -> dict[str, str]:
     return json.load(filepath)
 
 
@@ -63,7 +81,7 @@ def is_not_comment(text:str):
 
 
 def get_lang_dict(lang_id:str)-> dict[str, str]:
-    lang_dict = {}
+    lang_dict: dict[str, str] = {}
     lang_file_path = path.join(LANG_PATH, f"{lang_id}.json")
     with open(lang_file_path, mode="r", encoding="utf-8") as lang_file:
         lang_json = get_json_dict(lang_file)
@@ -73,11 +91,11 @@ def get_lang_dict(lang_id:str)-> dict[str, str]:
     return lang_dict
 
 
-def subtract_dict(dict_a, dict_b):
+def subtract_dict(dict_a: dict[str, str], dict_b: dict[str, str]):
     return {k:v for k,v in dict_a.items() if k not in dict_b}
 
 
-def compare_lang(lang_alt:str, lang_main:str=EN_US, print_as_md:bool=True):
+def compare_lang(lang_alt: str, lang_main: str=EN_US, print_as_md: bool=True):
     dict_main = get_lang_dict(lang_main)
     dict_alt = get_lang_dict(lang_alt)
     dict_missing = subtract_dict(dict_main, dict_alt)
@@ -91,7 +109,7 @@ def compare_lang(lang_alt:str, lang_main:str=EN_US, print_as_md:bool=True):
     return LangMeta(lang_alt, len(dict_alt), len(dict_extra), len(dict_missing))
 
 
-def print_dict_missing(dict_missing, lang_main, lang_alt):
+def print_dict_missing(dict_missing: dict[str, str], lang_main: str, lang_alt: str) -> None:
     print(f"### PRESENT IN (`{lang_main}`) BUT MISSING FROM (`{lang_alt}`)")
     if len(dict_missing) == 0:
         print(NOTHING, end="<br>\n")
@@ -100,7 +118,7 @@ def print_dict_missing(dict_missing, lang_main, lang_alt):
             print(f"`{element}`", end="<br>\n")
 
 
-def print_dict_extra(dict_extra, lang_main, lang_alt):
+def print_dict_extra(dict_extra: dict[str, str], lang_main: str, lang_alt: str) -> None:
     print(f"### PRESENT IN (`{lang_alt}`) BUT MISSING FROM (`{lang_main}`)")
     if len(dict_extra) == 0:
         print(NOTHING, end="<br>\n")
@@ -109,11 +127,11 @@ def print_dict_extra(dict_extra, lang_main, lang_alt):
             print(element, end="<br>\n")
 
 
-def get_todo_line(line:str):
+def get_todo_line(line:str) -> str:
     return TODO_REGEX.sub(TODO_VALUE, line)
 
 
-def clone_file(lang_id:str):
+def clone_file(lang_id:str) -> None:
     lang_file_path = path.join(LANG_PATH, f"{lang_id}.json")
     original_lang_file_path = path.join(LANG_PATH, "en_us.json")
     with open(original_lang_file_path, mode="r", encoding="utf-8") as original_file:
@@ -122,7 +140,7 @@ def clone_file(lang_id:str):
                 handle_original_line(original_line, lang_file)
 
 
-def handle_original_line(original_line:str, lang_file:TextIOWrapper):
+def handle_original_line(original_line: str, lang_file: TextIOWrapper) -> None:
     if is_not_comment(original_line):
         todo_line = get_todo_line(original_line)
         lang_file.write(todo_line)
@@ -130,7 +148,7 @@ def handle_original_line(original_line:str, lang_file:TextIOWrapper):
         lang_file.write(original_line)
 
 
-def get_list_lang_meta()->list[LangMeta]:
+def get_list_lang_meta() -> list[LangMeta]:
     list_lang_meta = create_list_lang_meta()
     list_lang_id = get_list_lang_id()
     add_alt_lang_meta(list_lang_meta, list_lang_id)
@@ -139,23 +157,23 @@ def get_list_lang_meta()->list[LangMeta]:
     return list_lang_meta
 
 
-def add_alt_lang_meta(list_lang_meta:list[LangMeta], list_lang_id:list[str]):
+def add_alt_lang_meta(list_lang_meta: list[LangMeta], list_lang_id: list[str]) -> None:
     for lang_id in list_lang_id:
         lang_meta = compare_lang(lang_id, print_as_md=False)
         list_lang_meta.append(lang_meta)
 
 
-def sort_list_lang_meta(list_lang_meta:list[LangMeta]):
+def sort_list_lang_meta(list_lang_meta: list[LangMeta]) -> None:
     list_lang_meta.sort(key=count_sort, reverse=True)
 
 
-def add_main_lang_meta(list_lang_meta:list[LangMeta]):
+def add_main_lang_meta(list_lang_meta: list[LangMeta]) -> None:
     list_lang_meta.sort(key=count_sort, reverse=True)
     lang_meta = compare_lang(EN_US, print_as_md=False)
     list_lang_meta.insert(0, lang_meta)
-    
 
-def create_list_lang_meta()->list[LangMeta]:
+
+def create_list_lang_meta() -> list[LangMeta]:
     return []
 
 
