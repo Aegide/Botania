@@ -148,10 +148,10 @@
   "botaniamisc.rannuncarpus.state_sensitive": "Parfaitement identique",
   "botaniamisc.rannuncarpus.state_insensitive": "Bloc identique",
   "botaniamisc.lokiRingLimitReached": "Sélection maximale atteinte",
-  "botaniamisc.loonium.not_attuned": "Liée à rien",
-  "botaniamisc.loonium.attuned": "Liée",
-  "botaniamisc.loonium.attuned_one": "Liée (%s)",
-  "botaniamisc.loonium.attuned_many": "Liée à plusieurs structures",
+  "botaniamisc.loonium.not_attuned": "Lié à rien",
+  "botaniamisc.loonium.attuned": "Lié",
+  "botaniamisc.loonium.attuned_one": "Lié (%s)",
+  "botaniamisc.loonium.attuned_many": "Lié à plusieurs structures",
   "botaniamisc.pollidisiac.feed_adults": "Nourrir les adultes",
   "botaniamisc.pollidisiac.feed_babies": "Nourrir les bébés",
   "botaniamisc.pollidisiac.feed_all": "Nourrir les animaux",
@@ -491,7 +491,7 @@
   "effect.botania.clear.description": "Supprime tous les effets, positifs ou négatifs.",
   "effect.botania.emptiness.description": "Empêche l'apparition des monstres dans un rayon de 128 blocs.",
   "effect.botania.feather_feet.description": "Immunité aux dégâts de chute.",
-  "effect.botania.soul_cross.description": "TODO:Restores health upon killing mobs.",
+  "effect.botania.soul_cross.description": "Tuer des créatures restaure la santé.",
 
   "_comment.mana_burst.alt": "Décharge de mana",
   "entity.botania.mana_burst": "Transfert de mana",
@@ -593,7 +593,7 @@
   "advancement.botania:craftingHaloCraft.desc": "Fabriquez un halo artisanal pour fabriquer plus facilement",
 
   "advancement.botania:manaweaveArmorCraft": "Mage de luxe",
-  "advancement.botania:manaweaveArmorCraft.desc": "Fabriquez un équipement en manasoie pour améliorer vos bâtons",
+  "advancement.botania:manaweaveArmorCraft.desc": "Fabriquez une tenue en manasoie pour améliorer vos bâtons",
 
   "advancement.botania:enchanterMake": "Grand enchanteur du Nord",
   "advancement.botania:enchanterMake.desc": "Fabriquez un enchanteur de mana pour mieux maîtriser vos enchantements",
@@ -664,9 +664,11 @@
   "advancement.botania:old_flower_pickup": "Déjà-vu",
   "advancement.botania:old_flower_pickup.desc": "Découvrez un motif Fleurjour ou un motif Ombrenuit",
 
-
   "advancement.botania:tinyPotatoBirthday": "Un grand jour",
   "advancement.botania:tinyPotatoBirthday.desc": "Célébrez l'anniversaire de la petite patate un 19 juillet",
+
+  "advancement.botania:allLooniumMobs": "Avis de recherche",
+  "advancement.botania:allLooniumMobs.desc": "Tuez tout les gardiens de Trésorthensia",
 
   "botania.challengelevel.easy": "Facile",
   "botania.challengelevel.normal": "Normal",
@@ -749,6 +751,23 @@
   "block.botania.green_mystical_flower": "Fleur mystique verte",
   "block.botania.red_mystical_flower": "Fleur mystique rouge",
   "block.botania.black_mystical_flower": "Fleur mystique noire",
+
+  "block.botania.potted_white_mystical_flower": "TODO:Potted Mystical White Flower",
+  "block.botania.potted_orange_mystical_flower": "TODO:Potted Mystical Orange Flower",
+  "block.botania.potted_magenta_mystical_flower": "TODO:Potted Mystical Magenta Flower",
+  "block.botania.potted_light_blue_mystical_flower": "TODO:Potted Mystical Light Blue Flower",
+  "block.botania.potted_yellow_mystical_flower": "TODO:Potted Mystical Yellow Flower",
+  "block.botania.potted_lime_mystical_flower": "TODO:Potted Mystical Lime Flower",
+  "block.botania.potted_pink_mystical_flower": "TODO:Potted Mystical Pink Flower",
+  "block.botania.potted_gray_mystical_flower": "TODO:Potted Mystical Gray Flower",
+  "block.botania.potted_light_gray_mystical_flower": "TODO:Potted Mystical Light Gray Flower",
+  "block.botania.potted_cyan_mystical_flower": "TODO:Potted Mystical Cyan Flower",
+  "block.botania.potted_purple_mystical_flower": "TODO:Potted Mystical Purple Flower",
+  "block.botania.potted_blue_mystical_flower": "TODO:Potted Mystical Blue Flower",
+  "block.botania.potted_brown_mystical_flower": "TODO:Potted Mystical Brown Flower",
+  "block.botania.potted_green_mystical_flower": "TODO:Potted Mystical Green Flower",
+  "block.botania.potted_red_mystical_flower": "TODO:Potted Mystical Red Flower",
+  "block.botania.potted_black_mystical_flower": "TODO:Potted Mystical Black Flower",
 
   "block.botania.apothecary_default": "Apothicaire de pétales",
   "block.botania.apothecary_forest": "Apothicaire en fuschite",
