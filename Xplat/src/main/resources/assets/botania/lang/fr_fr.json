@@ -3233,8 +3233,9 @@
 
   "botania.entry.teruTeruBozu": "Teru teru bōzu",
   "botania.tagline.teruTeruBozu": "TAGLINE",
-  "botania.page.teruTeruBozu0": "Le $(item)teru teru bōzu$(0) est une protection contre le mauvais temps.$(p)S'il est placé dans le monde, sa simple présence réduira la durée des $(thing)tempêtes de pluie/neige$(0).$(p)Une offrande de $(item)tournesol$(0) apportera le $(thing)soleil$(0). Une offrande d'$(item)orchidée bleue$(0) apportera la $(thing)pluie$(0).",
+  "botania.page.teruTeruBozu0": "Le $(item)teru teru bōzu$(0) est une protection contre le mauvais temps.$(p)S'il est placé dans le monde, sa simple présence réduira la durée des $(thing)tempêtes de pluie/neige$(0).$(p)Une offrande de $(item)tournesol$(0) apportera le $(thing)soleil$(0). Avec un $(item)comparateurs$(0), on peut mesurer le mauvais temps.",
   "botania.page.teruTeruBozu1": "$(o)poupée de cire, poupée de son$()",
+  "botania.page.teruTeruBozu2": "Une offrande d'$(item)orchidée bleue$(0) apportera la $(thing)pluie$(0).",
 
   "botania.entry.avatar": "Avatar de vifbois",
   "botania.tagline.avatar": "TAGLINE",
