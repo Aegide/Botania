@@ -3508,6 +3508,7 @@
   "botania.entry.obedienceStick": "Baguette florale",
   "botania.tagline.obedienceStick": "TAGLINE",
   "botania.page.obedienceStick0": "Pour une raison obscure, placer un peu de $(l:mana/pool)manacier$(/l) sur une $(item)brindille de vifbois$(0) rendra les fleurs $(o)très attentives$().$(p)Si une $(item)baguette florale$(0) est utilisée sur un $(l:mana/spreader)diffuseur de mana$(/l) ou un $(l:mana/pool)bassin de mana$(/l), alors toutes les fleurs à proximité seront liées à ce même bloc. Un $(item)distributeur$(0) peut utiliser une $(item)baguette florale$(0).",
+  "botania.page.obedienceStick_unbind": "TODO:On rare occasions it might not be desirable to have a flower pull mana from a nearby pool or output its mana to any spreader.$(p)Holding a $(item)Floral Obedience Stick$(0) while placing a flower will prevent it from automatically binding to a nearby spreader or pool. If the flower is already placed it can be unbound by using a $(item)Floral Obedience Stick$(0) on it, either manually or via a $(item)Dispenser$(0).",
   "botania.page.obedienceStick1": "$(o)SOYEZ TÉMOINS$() !",
 
   "botania.entry.slimeBottle": "Slime dans une bouteille",
@@ -3647,9 +3648,10 @@
 
   "botania.entry.corporeaFunnel": "Distributeur Corporea",
   "botania.tagline.corporeaFunnel": "TAGLINE",
-  "botania.page.corporeaFunnel0": "Ce bloc peut distribuer des objets du $(thing)réseau Corporea$(0), c'est comme un $(l:misc/corporea_index)index Corporea$(/l) mais en plus simple.$(p)Quand un $(item)distributeur Corporea$(0) reçoit un $(thing)signal redstone$(0), la demande sera envoyée à son $(l:ender/corporea)étincelle Corporea$(/l). L'objet demandé sere placé dans un $(thing)conteneur$(0) 1 ou 2 blocs sous le $(item)distributeur$(0), ou sinon juste distribué.", 
+  "botania.page.corporeaFunnel0": "Ce bloc peut distribuer des objets du $(thing)réseau Corporea$(0), c'est comme un $(l:misc/corporea_index)index Corporea$(/l) mais en plus simple.$(p)Quand un $(item)distributeur Corporea$(0) reçoit un $(thing)signal redstone$(0), la demande sera envoyée à son $(l:ender/corporea)étincelle Corporea$(/l). L'objet demandé sere placé dans un $(thing)conteneur$(0) 1 ou 2 blocs sous le $(item)distributeur$(0), ou sinon juste distribué.",
   "botania.page.corporeaFunnel1": "Pour spécifier l'objet à demander; vous aurez besoin de placer un $(item)cadre$(0) sur le $(item)distributeur Corporea$(0), et de placer dedans l'objet désiré. Si plusieurs $(item)cadre$(0) sont utilisés, l'objet demandé sera choisi au hasard.$(p)Orienter l'objet dans son $(item)cadre$(0) permet de choisir la quantité ($(o)1, 2, 4, 8, 16, 32, 48, 64$()).",
   "botania.page.corporeaFunnel2": "$(o)Application énergétique 2$()",
+  "botania.page.corporeaFunnel3": "TODO:Similar to a $(l:functional_flowers/hopperhock)$(item)Hopperhock$(0)$(/l), the $(item)Corporea Funnel$(0) supports non-empty container items in $(item)Glow Item Frames$(0) to specify multiple potential matches. The relative stack sizes in the container determine how likely that particular item is selected for a request.$(p)The request quantity is still determined by the rotation of the container item in the frame.",
 
   "botania.entry.corporeaInterceptor": "Intercepteur Corporea",
   "botania.tagline.corporeaInterceptor": "TAGLINE",
@@ -4062,6 +4064,7 @@
   "botania.entry.headCreating": "Création de tête",
   "botania.tagline.headCreating": "TAGLINE",
   "botania.page.headCreating0": "Avec quelques ressources et une $(item)étiquette$(0), vous serez en mesure de transformer une $(item)tête$(0) en celle d'un $(thing)joueur$(0) dont le nom est spécifié sur cette même $(item)étiquette$(0).$(p)Le fonctionnement de ce sort n'est pas encore bien compris, mais il est facile à reproduire avec un $(l:basics/rune_altar)autel runique$(/l).",
+  "botania.page.headCreating3": "TODO:Replacing the name tag with a $(item)Written Book$(0) (copies work as well) allows channeling even more information into the process:$(p)If the secret code to evoke a past $(thing)Skin$(0) is known in the arcane language of $(thing)Base64$(0), it may be written into a book to conjure that specific historic look of the $(thing)Player$(0)'s head.",
   "botania.page.headCreating2": "Si vous cherchez des idées pour des noms de $(item)têtes$(0), n'hésitez pas à regarder \"$(thing)Marc's Head Format$(0)\" sur internet.",
   "botania.page.headCreating1": "$(o)c'est à en perdre la tête$(0)",
 
