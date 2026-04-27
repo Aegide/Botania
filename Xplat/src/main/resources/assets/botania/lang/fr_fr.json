@@ -2773,6 +2773,7 @@
   "botania.tagline.pollidisiac": "Fait se reproduire les animaux",
   "botania.page.pollidisiac0": "Les animaux aiment manger. C'est tout ce qu'ils savent faire, vraiment. Étonnamment, ils ne savent même pas se nourrir tout seul.$(p)La $(item)pollidisiaque$(0) utilisera le $(thing)mana$(0) pour nourrir les animaux à proximité, si de la nourriture est disponible par terre ($(o)$(item)blé$(0), $(o)$(item)graines$(0), $(item)carottes$(0), etc$()).",
   "botania.page.pollidisiac1": "$(o)l'amour est dans le pré$()",
+  "botania.page.pollidisiac2": "Shift-clic-droit (ou via un $(item)distributeur$(0)) avec un $(l:basics/wand)baguette sylvestre$(/l) en $(thing)mode fonction$(0) sur cette fleur permet d'alterne entre nourrir uniquement les adultes, uniquement les bébés, ou tout les animaux.",
   "_comment.pollidisiac.exp": "Pollinisation + Aphrodisiaque",
 
   "botania.entry.clayconia": "Argilonia",
@@ -4088,7 +4089,7 @@
   "botania.page.blazeBlock1": "$(o)0x1a4$()",
 
   "botania.entry.challenges": "Défis",
-  "botania.entry.challenges.todo": "Trop de répétitions, texte à refaire.",
+  "_comment.botania.entry.challenges.todo": "Trop de répétitions, texte à refaire.",
   "botania.tagline.challenges": "TAGLINE",
   "botania.page.challenges0": "Ce livre contient une multitude $(thing)défis$(0). Des quêtes optionnelles pour mettre à l'épreuve vos connaissances et votre compréhension des mécaniques de $(thing)Botania$(0) et $(thing)Minecraft$(0).$(p)Ce serait de la triche d'utiliser d'autres mods pour vous aider, mais vous faites comme vous voulez.",
   "botania.page.challenges1": "Tout ces défis sont possibles. Il faut juste réfléchir, être ingénieux, comprendre la redstone et les fonctionnalités de $(thing)Botania$(0).$(p)Il est déconseillé d'utiliser d'autres mods pour vous aider, car sinon c'est trop facile et ce n'est plus un défi.",
