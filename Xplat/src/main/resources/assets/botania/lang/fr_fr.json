@@ -4066,8 +4066,8 @@
   "botania.entry.headCreating": "Création de tête",
   "botania.tagline.headCreating": "TAGLINE",
   "botania.page.headCreating0": "Avec quelques ressources et une $(item)étiquette$(0), vous serez en mesure de transformer une $(item)tête$(0) en celle d'un $(thing)joueur$(0) dont le nom est spécifié sur cette même $(item)étiquette$(0).$(p)Le fonctionnement de ce sort n'est pas encore bien compris, mais il est facile à reproduire avec un $(l:basics/rune_altar)autel runique$(/l).",
-  "botania.page.headCreating3": "TODO:Replacing the name tag with a $(item)Written Book$(0) (copies work as well) allows channeling even more information into the process:$(p)If the secret code to evoke a past $(thing)Skin$(0) is known in the arcane language of $(thing)Base64$(0), it may be written into a book to conjure that specific historic look of the $(thing)Player$(0)'s head.",
-  "botania.page.headCreating2": "Si vous cherchez des idées pour des noms de $(item)têtes$(0), n'hésitez pas à regarder \"$(thing)Marc's Head Format$(0)\" sur internet.",
+  "botania.page.headCreating3": "Utiliser un $(item)livre écrit$(0), plutôt qu'une $(item)étiquette$(0), permet d'injecter beaucoup plus d'informations dans le rituel.",
+  "botania.page.headCreating2": "Si vous cherchez de l'inspiration pour des $(item)têtes$(0), n'hésitez pas à utiliser des sites spécialisés sur internet.$(p)Uniquement pour la variante avec un $(item)livre écrit$(0), vous pouvez utiliser du $(thing)Base64$(0), une $(thing)URL$(0), ou un $(thing)hash$(0); afin de faire référence à une $(item)tête$(0) bien spécifique.",
   "botania.page.headCreating1": "$(o)c'est à en perdre la tête$(0)",
 
   "botania.entry.azulejo": "Azulejos",
